@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--kendo-ui style and javascript-->
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.3.1023/styles/kendo.default-v2.min.css" />
+
+  <script src="https://kendo.cdn.telerik.com/2019.3.1023/js/kendo.all.min.js"></script>
+
+  <link rel="stylesheet" href="./assets/css/style.css" >
+  <script src="./assets/js/custom.js"></script>
+  
+</head>
+<body>
+
+    <div class="colosseum">
+        <div class="header p-con">
+            <div class="header-section">
+                <div class="logo mid border-line">
+                    <img src="./assets/image/logo.png"/>
+                </div>
+                <div class="menu mid border-line">
+                    <a class="btn-menu"><span class="context">Menu</span><span class="icon glyphicon glyphicon-menu-hamburger"></span></a>
+                </div>
+            </div>
+            <div class="header-section">
+                <div class="desc mid border-line">
+                    <span>REP574-David Kelly</span>
+                </div>
+                <div class="logout">
+                    <a class="btn-logout"><span class="context">log out</span><img src="./assets/image/logout.png"/></a>
+                </div>
+            </div>
+        </div>
+        <div class="setting p-con">
+            <div class="setting-section">
+                <div class="date-range mid">
+                    <div id="daterangepicker" title="daterangepicker"></div>
+                    <div class="mid check"><input type="checkbox" checked></div>
+                </div>
+                <div class="created mid">
+                    <!-- <input type="text" value="Created" style="width:96px"/> -->
+                    <label class="wrap">
+                        <select>
+                            <option value="0">Created</option>
+                        </select>
+                    </label>
+                    <div class="mid check"><input type="checkbox" checked></div>
+                </div>
+            </div>
+            <div class="setting-section action-buttons">
+                <div class="save">
+                    <a><img src="./assets/image/save.png"/><span class="context">Save</span></a>
+                </div>
+                <div class="void">
+                    <a><img src="./assets/image/void.png"/><span class="context">Void</span></a>
+                </div>
+                <div class="email">
+                    <a><img src="./assets/image/email.png"/><span class="context">Email</span></a>
+                </div>
+                <div class="excel">
+                    <a><img src="./assets/image/excel.png"/><span class="context">Excel</span></a>
+                </div>
+                <div class="print">
+                    <a><img src="./assets/image/print.png"/><span class="context">Print</span></a>
+                </div>
+            </div>
+            <div class="setting-section">
+                <div class="search mid">
+                    <input type="text" value="2344456" style="width:145px"/>
+                    <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                </div>
+                <div class="export">
+                    <button class="btn">Export    <span class="check"><img src="./assets/image/export.png" style="width:12px"></span></button>
+                </div>
+                <div class="advanced mid">
+                    <button class="btn mid" onclick="showAdvancedSection()">Advanced Search <span class="check"><i class="material-icons" style="font-size:20px; height: 20px;">arrow_drop_down</i></span></button>
+                </div>
+            </div>
+        </div>
+        <div class="advanced-section" id="advanced-section">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="col-md-2 col-sm-2">
+                        <div class="advanced-item">
+                            <span class="item-title">Order Type:</span>
+                            <div class="item-data">
+                                <input type="text" class="text-input" id="order_type">
+                                <input type="checkbox" class="cb-in-input" id="order_type_check" checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="advanced-item">
+                            <span class="item-title">(S) Division:</span>
+                            <div class="item-data">
+                                <input type="text" class="text-input" id="division">
+                                <input type="checkbox" class="cb-in-input" id="division_check" checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="advanced-item">
+                            <span class="item-title">Season:</span>
+                            <div class="item-data">
+                                <input type="text" class="text-input" id="season">
+                                <input type="checkbox" class="cb-in-input" id="season_check" checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="advanced-item">
+                            <span class="item-title">Customer:</span>
+                            <div class="item-data">
+                                <input type="text" class="text-input" id="customer">
+                                <input type="checkbox" class="cb-in-input" id="customer_check" checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="advanced-item">
+                            <span class="item-title">Cust Po No:</span>
+                            <div class="item-data">
+                                <input type="number" class="text-input" id="cust_po_no" style="padding-right: 0px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="advanced-item">
+                            <span class="item-title">Sales Rep:</span>
+                            <div class="item-data">
+                                <input type="text" class="text-input" id="sales_rep">
+                                <input type="checkbox" class="cb-in-input" id="sales_rep_check" checked>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="col-md-2 col-sm-2">
+                        <div class="advanced-item">
+                            <span class="item-title">Style:</span>
+                            <div class="item-data">
+                                <input type="text" class="text-input" id="style">
+                                <input type="checkbox" class="cb-in-input" id="style_check" checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="advanced-item">
+                            <span class="item-title">School (Color):</span>
+                            <div class="item-data">
+                                <input type="text" class="text-input" id="school">
+                                <input type="checkbox" class="cb-in-input" id="school_check" checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="advanced-item">
+                            <span class="item-title">Ship To:</span>
+                            <div class="item-data">
+                                <input type="text" class="text-input" id="ship_to">
+                                <input type="checkbox" class="cb-in-input" id="ship_to_check" checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="advanced-item">
+                            <span class="item-title">D/C:</span>
+                            <div class="item-data">
+                                <input type="text" class="text-input" id="dc">
+                                <input type="checkbox" class="cb-in-input" id="dc_check" checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="advanced-item">
+                            <span class="item-title">Store:</span>
+                            <div class="item-data">
+                                <input type="number" class="text-input" id="store">
+                                <input type="checkbox" class="cb-in-input" id="store_check" checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="advanced-item">
+                            <span class="item-title">status:</span>
+                            <div class="item-data">
+                                <input type="text" class="text-input" id="status">
+                                <input type="checkbox" class="cb-in-input" id="status_check" checked>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-section">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div id="example">
+                        <table id="grid">
+                            <colgroup>
+                                <col style="width:50px"/>
+                                <col style="width: 100px"/>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th data-field="id">#</th>
+                                    <th data-field="ordernumber">Order Number</th>
+                                    <th data-field="customer1">Customer Name</th>
+                                    <th data-field="customer2">Customer Name</th>
+                                    <th data-field="customer3">Customer Name</th>
+                                    <th data-field="customer4">Customer Name</th>
+                                    <th data-field="customer5">Customer Name</th>
+                                    <th data-field="customer6">Customer Name</th>
+                                    <th data-field="customer7">Customer Name</th>
+                                    <th data-field="customer8">Customer Name</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>234788</td>
+                                    <td>1568</td>
+                                    <td>HERB ENTER</td>
+                                    <td>AS20 457 JF</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>AS20 457 Text</td>
+                                    <td>345 SJDF SOME</td>
+                                    <td>HOLIDAY 453 DE</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer p-con">
+            <div class="footer-section">
+                <div class="logo mid border-line">
+                    <img src="./assets/image/logo.png"/>
+                </div>
+                <div class="footer-nav mid">
+                    <a class="btn-menu"><span class="context">Home</span></a>
+                    <a class="btn-menu"><span class="context">Help</span></a>
+                    <a class="btn-menu"><span class="context">FAQ</span></a>
+                    <a class="btn-menu"><span class="context">Contact</span></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="copy-right mid">
+                    <span>COLOSSEUM - All Rights Reserved 2020</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+
+        function init(){
+            var start = new Date();
+            var end = new Date(start.getFullYear(), start.getMonth(), start.getDate() + 1);
+            $("#daterangepicker").kendoDateRangePicker({ 
+                format: "MMM d, yyyy", 
+                range: { start: start, end: end } 
+            });
+
+            $('#daterangepicker').children('span:nth-child(2)').text('-');
+            $('#daterangepicker').children('span:nth-child(2)').css('padding','0px 10px');
+        }
+        init();
+
+        $("#grid").kendoGrid({
+            height: 650,
+            sortable: true,
+            pageable: {
+                messages: {
+                    empty: "No items to display"
+                },
+                input: false,
+                refresh: true,
+                pageSizes: true,
+                pageSizes: [10, 20, 30, 50]
+            }
+        });
+
+        $("#grid").data("kendoGrid").dataSource.pageSize(20);
+    });
+</script>
+</html>

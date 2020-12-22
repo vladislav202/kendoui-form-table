@@ -1,0 +1,490 @@
+.colosseum{ width: 100%; }
+.p-con{padding:0px 30px;}
+.row{margin-left: 0px; margin-right: 0px}
+input[type="checkbox"]{
+    margin-top: 0px;
+}
+input{
+    border-radius:5px;
+    font-size: 12px;
+    padding: 4px;
+    outline: 0px;
+    padding-left:10px;
+    box-sizing: border-box;
+    height: 30px;
+    border:none;
+    color: #3f3f3f;
+}
+
+.btn{
+    padding: 4px 8px;
+    background-color: white;
+    outline: none;
+    box-shadow: none;
+}
+
+
+/*** start header style **/
+
+.header {
+    background-color: #0b0c0c; 
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.header-section{display:flex; color:white; align-items:center;}
+
+.border-line{ border-right: 1px solid #8a8282; height: 36px;}
+.mid{ display: flex; align-items:center; justify-content: center; }
+.check{padding-left: 10px; height: 20px;}
+.header-section a, .footer-section a{ 
+    cursor: pointer; 
+    color:white;
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+}
+.header-section span{font-size: 16px;}
+.header-section a .context, .footer-section a .context{padding-right: 11px;}
+.header-section a .icon{font-size: 12px;}
+
+.header-section .logo, .footer-section .logo{ padding:5px 25px 5px 0px; }
+.header-section .menu{ padding:0px 18px 0px 25px;}
+.header-section .desc{padding-right:30px;}
+.header-section .logout{padding-left: 24px;}
+.logo img{width: 146px;}
+.logout img{width: 19px; height: 19px;}
+
+.footer{
+    background-color: #0b0c0c; 
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.footer-section{display:flex; color:white; align-items:center;}
+.footer-section .footer-nav{ padding:0px 18px 0px 25px;}
+
+/*** option1 page styles start ***/
+
+/***   start menu setting bar style ***/
+.setting{
+    background-color: #3f3f3f;
+    height:60px;
+    display: flex; align-items:center; justify-content: space-between;
+}
+
+.setting-section{display:flex; align-items:center;}
+.action-buttons div{
+    text-align: center;
+    padding: 0px 15px;
+}
+.action-buttons div a{
+    cursor: pointer; 
+    color:white;
+    text-decoration: none;
+}
+.action-buttons div a span{
+    display: block;
+    font-size: 12px;
+}
+
+.k-label{display:none;}
+#daterangepicker{background:transparent;}
+span.k-textbox-container{padding-top:0px; width: 120px;}
+
+span .k-textbox{
+    padding-left:35px !important;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 12px;
+}
+
+span.k-widget.k-dateinput{position: relative;}
+.k-dateinput:before{
+    content: url(../image/calendar_icon.png);
+    position: absolute;
+    opacity: 1;
+    z-index:1000;
+    left: 8px;
+    top: 7px;
+}
+
+.created{
+    padding-left: 35px;
+    position: relative;
+}
+.created label {
+    margin-bottom: 0px;
+}
+.created label.wrap:after {
+    content:url(../image/dropdown.png);
+    position: absolute;
+    right: 30px;
+    bottom: 7px;
+}
+.created select{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+.search{position: relative; }
+.search .search-icon{position: absolute; right: 8px;}
+.export, .advanced{padding-left: 8px;}
+/***  advanced section  ***/
+.advanced-section{
+    color: #8a8282;
+    display: none;
+}
+.advanced-item{display:flex; justify-content:space-between; align-items:center; margin-top: 10px;}
+.item-data{position :relative; display:flex; align-items:center;}
+.item-data .text-input{position: relative; width: 150px; padding: 0px 20px 0px 8px; border:1px solid #8a8282; border-radius: 5px; }
+.cb-in-input{position: absolute; right: 5px;}
+.grid-section{padding-top: 20px;}
+
+
+/*** option1 page styles end ***/
+.order-form {
+    background-color: #EFF3F6;
+}
+.order-form .action-button-group{
+    display: flex;
+    padding: 10px 23px;
+}
+.order-form .action-button-group .btn{
+    color: #284048;
+    border: 1px solid #8a8282;
+    background-color: #f2f4f7;
+    margin: 0px 4px;
+}
+form {
+    padding: 10px 12px;
+}
+
+select {
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+label.wrap:after {
+    content:url(../image/dropdown.png);
+    position: absolute;
+    right: 18px;
+    bottom: 28px;
+}
+
+form .form-content{
+    border: 1px solid #8a8282;
+}
+
+form .form-field {
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form .form-field input, .form-field select {
+    font-size: 14px;
+    border-bottom: 1px solid #8a8282;
+    border-radius: 0px;
+    padding: 0px;
+    padding-bottom: 10px;
+    color: #354052;
+    width: 150px;
+}
+
+.order-form form .form-field input, .form-field select {
+    background-color: #EFF3F6;
+}
+
+form .form-field span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 11px;
+    color: #7F8FA4;
+    height: 16px;
+}
+
+form .form-field span.required{
+    display: inline-block;
+    color: #F04B4B;
+    margin-right: 2px;
+}
+
+.contact-form form .form-field input {
+    background-color: white;
+}
+
+.k-datepicker .k-picker-wrap {
+    border: none;
+}
+.k-datepicker .k-select {
+    position: absolute;
+    right: 0px;
+    top: 3px;
+}
+.k-picker-wrap .k-input {
+    border-bottom: 1px solid #8a8282;
+    font-size: 14px;
+    padding-bottom: 14px;
+    margin-top: 13px;
+    padding-left: 0px;
+}
+
+span.k-icon{
+    margin-bottom: 0px !important;
+}
+
+.contact-form .form-content .form-field input {
+    width: 100%;
+}
+.contact-form .form-content .form-field select {
+    background-color: white;
+}
+.contact-form .form-content .form-field label {
+    margin-bottom: 0px;
+}
+.contact-form .form-content .form-field label.wrap:after {
+    bottom: 22px;
+}
+.contact-form .form-content .form-field span.search-icon {
+    position: absolute;
+    right: 22px;
+    bottom: 12px;
+}
+
+.contact-form .form-content .form-field .checkbox-field {
+    display: flex;
+    border-bottom: 1px solid #8a8282;
+}
+.contact-form .form-content .form-field .checkbox-field input {
+    border: none;
+}
+.contact-form .form-content .form-field .checkbox-field input.check {
+    width: 16px;
+}
+
+.contact-form .form-content .form-field .select-box {
+    border-bottom: 1px solid #8a8282;
+}   
+.contact-form .form-content .form-field .select-box select {
+    border: none;
+    background-color: white;
+}
+
+.k-tabstrip-wrapper {
+    padding: 0px 10px;
+}
+.k-tabstrip>.k-content {
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #EFF3F6;
+}
+.k-tabstrip .k-grid thead {
+    background-color: #7F807F;
+}
+.k-tabstrip .k-grid tbody {
+    background-color: #EFF3F6;
+}
+.k-tabstrip tbody .search-box{
+    position: relative;
+}
+.k-tabstrip tbody .search-box .search-icon{
+    position: absolute;
+    right: 4px;
+    bottom: 9px;
+}
+.k-tabstrip .k-grid tbody td .qty-field input{
+    height: 20px;
+    text-align: right;
+}
+.k-tabstrip .k-grid tbody td .style-description input{
+    height: 20px;
+}
+.k-tabstrip tbody .checkbox-field{
+    position: relative;
+}
+
+.k-tabstrip .k-grid tbody td .qty-size {
+    height: 15px;
+    display: block;
+    text-align: center;
+}
+
+.k-tabstrip .k-grid th {
+    font-size: 11px;
+    padding: 8px 4px;
+    text-align: center;
+    color: black;
+}
+.k-tabstrip .k-grid-header .k-header {
+    vertical-align: middle;
+}
+
+.k-tabstrip .k-grid tbody td {
+    padding: 4px 1px;
+    font-size: 11px;
+    text-align: center;
+}
+.k-tabstrip .k-grid tbody td input {
+    padding: 4px;
+    font-size: 11px;
+    border-radius: 3px;
+    height: 36px;
+    width: 100%;
+    text-align: center;
+}
+.k-tabstrip .k-grid tbody td input.check {
+    width: 14px;
+}
+.k-tabstrip .k-grid tbody td .checkbox-field input.check {
+    width: 14px;
+    position: absolute;
+    right: 3px;
+    bottom: 0px;
+}
+
+.k-tabstrip .grid-section .filtering {
+    background-color: #B7B7B7;
+    height:60px;
+    display: flex; align-items:center; justify-content: space-between;
+}
+
+.k-tabstrip .grid-section .filtering .filtering-section {
+    display: flex;
+}
+
+.k-tabstrip .grid-section .filtering .filtering-section input {
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.k-tabstrip .grid-section .filtering .filtering-section .filtering-section-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.k-tabstrip .grid-section .filtering .filtering-section .filtering-section-item select {
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.k-tabstrip .grid-section .filtering .filtering-section .filtering-section-item label {
+    margin-bottom: 0px;
+}
+
+.k-tabstrip .grid-section .filtering .filtering-section .filtering-section-item label.wrap:after {
+    content:url(../image/dropdown.png);
+    position: absolute;
+    right: 4px;
+    bottom: 7px;
+}
+
+.k-tabstrip-top>.k-tabstrip-items .k-item {
+    background-color: #EFF3F6;
+    color: #354052;
+    border-bottom: 1px solid #8a8282;
+    box-shadow: 0px 1px 0px 0px #8a8282;
+    margin-right: 3px;
+}
+.k-tabstrip-top>.k-tabstrip-items .k-item.k-state-active {
+    background-color: #EFF3F6;
+    box-shadow: none;
+}
+
+/*** option1-2 page styles start ***/
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px 10px;
+}
+  
+  /* Modal Content/Box */
+.modal-content {
+    border: 1px solid #888;
+    width: 100%;
+}
+
+
+
+.slides {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+}
+.slider-content {
+    border: 1px solid #888;
+    width: 100%;
+}
+.slides .slider-content ul {
+    list-style:none;
+    position:relative;
+}
+
+@-webkit-keyframes anim_slider {
+    0% {
+        left:100%;
+        opacity:1;
+    }
+    50% {
+        left:50%;
+        opacity:1;
+    }
+    100% {
+        left:0%;
+        opacity:1;
+    }
+}
+@-moz-keyframes anim_slider {
+    0% {
+        left:100%;
+        opacity:1;
+    }
+    50% {
+        left:50%;
+        opacity:1;
+    }
+    100% {
+        left:0%;
+        opacity:1;
+    }
+}
+
+.slides .slider-content ul li .slider {
+    margin:0 auto;
+    position:absolute;
+    left: 0px;
+    background-color: white;
+
+    -webkit-animation-name: anim_slider;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+
+    -moz-animation-name: anim_slider;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+}
+

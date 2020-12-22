@@ -1,0 +1,3059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--kendo-ui style and javascript-->
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.3.1023/styles/kendo.default-v2.min.css" />
+
+  <script src="https://kendo.cdn.telerik.com/2019.3.1023/js/kendo.all.min.js"></script>
+
+  <link rel="stylesheet" href="./assets/css/style.css" >
+  <script src="./assets/js/custom.js"></script>
+  
+</head>
+<body>
+
+    <div class="colosseum">
+        <div class="header p-con">
+            <div class="header-section">
+                <div class="logo mid border-line">
+                    <img src="./assets/image/logo.png"/>
+                </div>
+                <div class="menu mid border-line">
+                    <a class="btn-menu"><span class="context">Menu</span><span class="icon glyphicon glyphicon-menu-hamburger"></span></a>
+                </div>
+            </div>
+            <div class="header-section">
+                <div class="desc mid border-line">
+                    <span>REP574-David Kelly</span>
+                </div>
+                <div class="logout">
+                    <a class="btn-logout"><span class="context">log out</span><img src="./assets/image/logout.png"/></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="setting p-con">
+            <div class="setting-section">
+                <div class="date-range mid">
+                    <div id="daterangepicker" title="daterangepicker"></div>
+                    <div class="mid check"><input type="checkbox" checked></div>
+                </div>
+                <div class="created mid">
+                    <input type="text" value="Created" style="width:96px"/>
+                    <div class="mid check"><input type="checkbox" checked></div>
+                </div>
+            </div>
+            <div class="setting-section">
+                <div class="search mid">
+                    <input type="text" value="2344456" style="width:145px"/>
+                    <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                </div>
+                <div class="export">
+                    <button class="btn">Export    <span class="check"><img src="./assets/image/export.png" style="width:12px"></span></button>
+                </div>
+                <div class="advanced mid">
+                    <button class="btn mid">Advanced Search <span class="check"><i class="material-icons" style="font-size:20px; height: 20px;">arrow_drop_down</i></span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-form">
+            <div class="action-button-group">
+                <button class="btn">Save <span class="check"><img src="./assets/image/save1.png" style="width:12px"></span></button>
+                <button class="btn">Void <span class="check"><img src="./assets/image/void1.png" style="width:12px"></span></button>
+                <button class="btn">Email <span class="check"><img src="./assets/image/email1.png" style="width:12px"></span></button>
+                <button class="btn">Excel <span class="check"><img src="./assets/image/excel1.png" style="width:12px"></span></button>
+                <button class="btn">Print <span class="check"><img src="./assets/image/print1.png" style="width:12px"></span></button>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-md-9 col-sm-9">
+                        <div class="form-content">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">ORDER NO</span>
+                                        <input type="text" class="text-input" value="1234567">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel"></span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">Booking Order</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">SEASON</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">Spring 2020</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span><span class="required">*</span>SHIP DATE</span>
+                                        <input id="ship-date" value="04/03/2020">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span><span class="required">*</span>CUST PO#</span>
+                                        <input type="text" class="text-input" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">CUSTOMER PROG</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">1. Spring 2020 Booki</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">SALES REP</span>
+                                        <input type="text" class="text-input" value="Dave Kelly">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">ORDER TYPE</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">Booking</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span><span class="required">*</span>CANCEL DATE</span>
+                                        <input id="cancel-date" value="04/03/2020">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span><span class="required">*</span>CUST PO#</span>
+                                        <input type="text" class="text-input" value="Dave 41520">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel" style="font-size: 11px;">CUSTOMER DEPARTMENT</span>
+                                        <input type="text" class="text-input" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel"></span>
+                                        <input type="text" class="text-input" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">ORDER DATE</span>
+                                        <input id="order-date" value="04/03/2020">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel"></span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">General</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">CONTACT</span>
+                                        <input type="text" class="text-input" value="Dave Jacobs">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span><span class="required">*</span>DISTRIBUTION:</span>
+                                        <input type="text" class="text-input" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">STATUS</span>
+                                        <input type="text" class="text-input" value="Review">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">ORDER VOID</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0"></option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">DIVISION</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">College Licence</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">DEPARTMENT</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">License-College</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span><span class="required">*</span>STORE</span>
+                                        <input type="text" class="text-input" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">TERMS</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">Net 30 Days</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span><span class="required">*</span>STORE</span>
+                                        <input type="text" class="text-input" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">WEB IMAGE</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">CUSTOMER</span>
+                                        <input type="text" class="text-input" value="1564">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel"></span>
+                                        <input type="text" class="text-input" value="Rand IMPRESSION">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span><span class="required">*</span>TRADE TERMS</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">Customer P - PREP</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span><span class="required">*</span>SHIP VIA:</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">FEDEX GROUND</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">UPC CHARGE</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">UPC RETAG</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="form-content">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">HANGER CHARGE(Y/N):</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">HANGER CHARGE(Y/N):</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">ORDER CLOSED(Y/N)</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">ORDER HOLD(Y/N)</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">A/R HOLD (Y/N)</span>
+                                        <input type="text" class="text-input" value="No">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">DIO (Y/N)</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">CREATED BY DATE</span>
+                                        <input id="created-by-date" value="04/03/2020">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field" style="margin-bottom: 16px;">
+                                        <span class="form-field-lavel">CREATED BY</span>
+                                        <input type="text" class="text-input" value="REP578">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">PROCESS 123</span>
+                                        <input type="text" class="text-input" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">BULK CODE</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">[X] Not EDI Order</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="contact-form">
+            <form >
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="form-content">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">BILL TO</span>
+                                        <input type="text" class="text-input" value="1566">
+                                        <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">EDI ORD HEADER ID</span>
+                                        <input type="text" class="text-input" value="Rand S Impressions INC.">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">ADDRESS:</span>
+                                        <input type="text" class="text-input" value="125 MARSHALL ST">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel"></span>
+                                        <div class="checkbox-field">   
+                                            <input type="text" class="text-input" value="Foreign (Y/N)">
+                                            <input type="checkbox" class="check">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">ADDRESS:</span>
+                                        <input type="text" class="text-input" value="SYRACUSE">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel"></span>
+                                        <input type="text" class="text-input" value="USA">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel"></span>
+                                        <input type="text" class="text-input" value="1310">
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-5">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">EMAIL:</span>
+                                        <input type="text" class="text-input" value="sandymjac@gmail.com">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">PHONE</span>
+                                        <input type="text" class="text-input" value="315456456">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">BI FAX</span>
+                                        <input type="text" class="text-input" value="315456456">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">D/C RATE</span>
+                                        <input type="text" class="text-input" value="4%">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel"></span>
+                                        <input type="text" class="text-input" value="$0.00">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-field">
+                                        <span><span class="required">*</span>COMMENTS</span>
+                                        <input type="text" class="text-input" value="Some comment text here...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5">
+                        <div class="form-content">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">SHIP TO</span>
+                                        <div class="checkbox-field">   
+                                            <input type="text" class="text-input" value="1566">
+                                            <input type="checkbox" class="check">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">EDI ORD HEADER ID</span>
+                                        <input type="text" class="text-input" value="Rand S Impressions INC.">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">ADDRESS:</span>
+                                        <input type="text" class="text-input" value="125 MARSHALL ST">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel"></span>
+                                        <div class="checkbox-field">   
+                                            <input type="text" class="text-input" value="Foreign (Y/N)">
+                                            <input type="checkbox" class="check">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel"></span>
+                                        <div class="checkbox-field">   
+                                            <input type="text" class="text-input" value="eCom">
+                                            <input type="checkbox" class="check">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">ADDRESS:</span>
+                                        <input type="text" class="text-input" value="SYRACUSE">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel"></span>
+                                        <input type="text" class="text-input" value="USA">
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel"></span>
+                                        <input type="text" class="text-input" value="1310">
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-5">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">EMAIL:</span>
+                                        <input type="text" class="text-input" value="sandymjac@gmail.com">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">PHONE</span>
+                                        <input type="text" class="text-input" value="315456456">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">FAX</span>
+                                        <input type="text" class="text-input" value="315456456">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">SHIP TO RESION</span>
+                                        <div class="select-box">
+                                            <label class="wrap">
+                                                <select>
+                                                    <option value="0">North East</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-field">
+                                        <span><span class="required">*</span>PACK COMMENTS</span>
+                                        <input type="text" class="text-input" value="Some comment text here...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="form-content">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">BULK ORIGIN ORDER#</span>
+                                        <input type="text" class="text-input" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">EDIT (Y/N)</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">DISTRIBUTION EDI (Y/N)</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">EDI ORD HEADER ID</span>
+                                        <input type="text" class="text-input" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">EDI 860 Y/N, QUAL</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">EDI 855 I/F,(Y/N)</span>
+                                        <label class="wrap">
+                                            <select>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">CUST PO TYPE</span>
+                                        <input type="text" class="text-input" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-field">
+                                        <span class="form-field-lavel">CUST CONTRACT #</span>
+                                        <input type="text" class="text-input" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-field">
+                                        <span></span>
+                                        <input type="text" class="text-input" style="border: none;" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="tabstrip" class="tabstrip">
+            <ul>
+                <li class="k-state-active">
+                    DETAIL
+                </li>
+                <li>
+                    ATTACHMENT
+                </li>
+                <li>
+                    DOCUMENT LOG
+                </li>
+                <li>
+                    COMMISION RATIO
+                </li>
+                <li>
+                    PROGRESS
+                </li>
+            </ul>
+            <div class="grid-section">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="filtering p-con">
+                            <div class="filtering-section">
+                                <div class="filtering-section-item">
+                                    <span class="filtering-style" style="margin-right: 10px;">Filtering Style:</span>
+                                    <label class="wrap">
+                                        <select>
+                                            <option value="0"></option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="filtering-section-item">
+                                    <span class="filtering-color" style="margin-right: 10px;">Filtering Color:</span>
+                                    <label class="wrap">
+                                        <select>
+                                            <option value="0"></option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="filtering-section-item">
+                                    <a><img src="./assets/image/group_upload.png"/></a>
+                                </div>
+                            </div>
+                            <div class="filtering-section">
+                                <input type="text" class="text-input" value="146">
+                                <input type="text" class="text-input" value="$2,127.00">
+                                <input type="text" class="text-input" value="$78.12">
+                                <input type="text" class="text-input" value="$2,127.00">
+                                <div class="save">
+                                    <a><img src="./assets/image/group_copy.png"/></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="example">
+                            <table id="grid">
+                                <colgroup>
+                                    <col style="width: 2px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 7px;"/>
+                                    <col style="width: 4px;"/>
+                                    <col style="width: 4px;"/>
+                                    <col style="width: 4px;"/>
+                                    <col style="width: 13px;"/>
+                                    <col style="width: 4px;"/>
+                                    <col style="width: 4px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 3px;"/>
+                                    <col style="width: 4px;"/>
+                                    <col style="width: 4px;"/>
+                                    <col style="width: 4px;"/>
+                                    <col style="width: 4px;"/>
+                                    <col style="width: 4px;"/>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th data-field="id"><input type="checkbox" class="check" checked></th>
+                                        <th data-field="Seq">Seq</th>
+                                        <th data-field="Style">Style</th>
+                                        <th data-field="School">School</th>
+                                        <th data-field="color_chg">Color Chg</th>
+                                        <th data-field="graphi_chg">Graphi Chg</th>
+                                        <th data-field="style_desc">Style Description</th>
+                                        <th data-field="size_ratio">Size Ratio</th>
+                                        <th data-field="pack_qty">Pack qty</th>
+                                        <th data-field="qty1">qty1</th>
+                                        <th data-field="qty2">qty2</th>
+                                        <th data-field="qty3">qty3</th>
+                                        <th data-field="qty4">qty4</th>
+                                        <th data-field="qty5">qty5</th>
+                                        <th data-field="qty6">qty6</th>
+                                        <th data-field="qty7">qty7</th>
+                                        <th data-field="qty8">qty8</th>
+                                        <th data-field="qty9">qty9</th>
+                                        <th data-field="qty10">qty10</th>
+                                        <th data-field="qty11">qty11</th>
+                                        <th data-field="qty12">qty12</th>
+                                        <th data-field="tot_qty">Tot Qty</th>
+                                        <th data-field="unit_price">Unit Price</th>
+                                        <th data-field="ampunt">Ampunt</th>
+                                        <th data-field="dc_per">D/C(%)</th>
+                                        <th data-field="dc_amt">D/C Amt</th>
+                                        <th data-field="extension">Extension</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="check" checked></td>
+                                        <td><input type="text" value="1"/></td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="COBS1111455" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="SYVCD" style="text-align: left;">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="search-box">
+                                                <input type="text" class="text-input" value="">
+                                                <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="style-description">
+                                                <div style="display: flex; justify-content: space-between;">
+                                                    <span>M56</span>
+                                                    <span>MEN'S S-XXL</span>
+                                                </div>
+                                                <input type="text" class="text-input" value="MENS DETLEF REVERSIBLE SHO">
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="text-input" value=""></td>
+                                        <td>
+                                            <div class="checkbox-field">   
+                                                <input type="text" class="text-input" value="1">
+                                                <input type="checkbox" class="check" checked>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">S</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">M</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">L</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XL</span>
+                                                <input type="text" class="text-input" value="6">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size">XXL</span>
+                                                <input type="text" class="text-input" value="4">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="25">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.00">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$144.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$4.80">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$14.60">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="qty-field">
+                                                <span class="qty-size"></span>
+                                                <input type="text" class="text-input" value="$877.60">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                            <script>
+                                $(document).ready(function() {
+                                      
+                                    $("#grid").kendoGrid({
+                                        height: 650,
+                                        sortable: true,
+                                        pageable: {
+                                            messages: {
+                                                empty: "No items to display"
+                                            },
+                                            input: false,
+                                            refresh: true,
+                                            pageSizes: true,
+                                            pageSizes: [10, 20, 30, 50]
+                                        }
+                                    });
+                        
+                                    $("#grid").data("kendoGrid").dataSource.pageSize(20);
+                                });
+                
+                             </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+        </div>
+
+        <div class="footer p-con">
+            <div class="footer-section">
+                <div class="logo mid border-line">
+                    <img src="./assets/image/logo.png"/>
+                </div>
+                <div class="footer-nav mid">
+                    <a class="btn-menu"><span class="context">Home</span></a>
+                    <a class="btn-menu"><span class="context">Help</span></a>
+                    <a class="btn-menu"><span class="context">FAQ</span></a>
+                    <a class="btn-menu"><span class="context">Contact</span></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="copy-right mid">
+                    <span>COLOSSEUM - All Rights Reserved 2020</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+
+        $("#ship-date").kendoDatePicker();
+        $("#cancel-date").kendoDatePicker();
+        $("#order-date").kendoDatePicker();
+        $("#created-by-date").kendoDatePicker();
+
+        $("#tabstrip").kendoTabStrip({
+            animation:  {
+                open: {
+                    effects: "fadeIn"
+                }
+            }
+        });
+
+        function init(){
+            var start = new Date();
+            var end = new Date(start.getFullYear(), start.getMonth(), start.getDate() + 1);
+            $("#daterangepicker").kendoDateRangePicker({ 
+                format: "MMM d, yyyy", 
+                range: { start: start, end: end } 
+            });
+
+            $('#daterangepicker').children('span:nth-child(2)').text('-');
+            $('#daterangepicker').children('span:nth-child(2)').css('padding','0px 10px');
+        }
+        init();
+    });
+</script>
+</html>
